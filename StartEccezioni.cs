@@ -16,7 +16,7 @@ namespace StartEccezioni {
                 }
                 catch (Exception e) {
                     inputOk = false;
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine(e);
                 }
             } while (inputOk);
 
