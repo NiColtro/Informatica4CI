@@ -9,7 +9,9 @@ namespace AgenziaImmobiliare {
         public string Indirizzo { get; set; }
         public string CAP { get; set; }
         public string Citta { get; set; }
-        public int Superficie {
+
+        public int Superficie
+        {
             get { return Superficie; }
             set
             {
@@ -48,7 +50,8 @@ namespace AgenziaImmobiliare {
 
     class Box : Immobile {
 
-        public int PostiAuto {
+        public int PostiAuto
+        {
             get { return PostiAuto; }
             set
             {
@@ -77,7 +80,8 @@ namespace AgenziaImmobiliare {
 
     class Appartamento : Immobile {
 
-        public int NumeroVani {
+        public int NumeroVani
+        {
             get { return NumeroVani; }
             set
             {
@@ -87,8 +91,9 @@ namespace AgenziaImmobiliare {
                     throw new Exception("Proprietà NUM. VANI non valida.");
             }
         }
-        
-        public int NumeroBagni {
+
+        public int NumeroBagni
+        {
             get { return NumeroBagni; }
             set
             {
@@ -118,7 +123,8 @@ namespace AgenziaImmobiliare {
 
     class Villa : Appartamento {
 
-        public int SuperficieGiardino {
+        public int SuperficieGiardino
+        {
             get { return SuperficieGiardino; }
             set
             {
@@ -139,14 +145,14 @@ namespace AgenziaImmobiliare {
             if (obj.GetType() == typeof(Villa)) {
                 if (Superficie != (obj as Villa).Superficie)
                     return Superficie.CompareTo((obj as Villa).Superficie);
-                
+
                 if (NumeroVani != (obj as Villa).NumeroVani)
                     return NumeroVani.CompareTo((obj as Villa).NumeroVani);
-                
+
                 if (SuperficieGiardino != (obj as Villa).SuperficieGiardino)
                     return SuperficieGiardino.CompareTo((obj as Villa).SuperficieGiardino);
             }
-            
+
             return -1;
         }
 
